@@ -1,3 +1,17 @@
+import creational.factorymethod.FactoryPayment
+import creational.factorymethod.IPayment
+import creational.factorymethod.PaymentType
+
 fun main(){
-    print("dp")
+    println("dp")
+
+    fun testFactoryMethod(){
+        val pago: IPayment
+
+        pago = FactoryPayment.buildPayment(PaymentType.PAYPAL)
+
+        pago.doPayment()
+    }
+
+    testFactoryMethod()
 }
